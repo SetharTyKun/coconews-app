@@ -44,7 +44,7 @@ class DiscoverController extends GetxController {
     isLoading(true);
 
     try {
-      final response = await dio.get('/api/v4/top-headlines?category=$category&country=us&lang=en&apikey=$kApiKey');
+      final response = await dio.get('/?category=$category&country=us&lang=en');
       final data = response.data['articles'] as List;
       articleList.value = data.map((article) => ArticleModel.fromJson(article)).toList();
 
