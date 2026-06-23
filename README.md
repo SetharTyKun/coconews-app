@@ -1,16 +1,22 @@
 # coconews
 
-A new Flutter project.
+coconews is a Flutter news app that pulls live headlines from the [GNews API](https://gnews.io/) and lets you browse, filter, and save stories. It fetches top headlines across categories (General, World, Nation, Business, Technology, Entertainment, Sports, Science, Health), caches them locally for fast reloads, and lets you bookmark articles to read later — all wrapped in a dark/light themeable UI.
 
-## Getting Started
+## Tech Stack
 
-This project is a starting point for a Flutter application.
+**Framework:** Flutter (Dart, SDK ^3.10.3)
 
-A few resources to get you started if this is your first Flutter project:
+**API Integration:** [GNews API](https://gnews.io/) — top headlines endpoint, fetched via `dio`, filtered by category/country/language
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+**Packages:**
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- `get` — state management, routing, dependency injection (GetX)
+- `dio` — HTTP networking / API integration
+- `json_annotation` / `json_serializable` — JSON model serialization
+- `cached_network_image` — image loading & caching
+- `url_launcher` — opening articles in an in-app browser
+- `intl` — date/number formatting, localization
+- `connectivity_plus` — network connectivity checks
+- `get_storage` — local caching & bookmark persistence
+- `flutter_native_splash` — native splash screen
+- `change_app_package_name` — package name management
